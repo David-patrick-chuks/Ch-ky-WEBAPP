@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    background: rgb(138,78,255);
+    background: linear-gradient(0deg, rgba(138,78,255,1) 35%, rgba(15,232,215,1) 100%);
+
+}
+body .boarding{
+    background-color: white;
+}
