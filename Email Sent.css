@@ -1,0 +1,249 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+
+}
+#evimg{
+  width: 40%;
+  filter: drop-shadow(1px 1px 2px rgb(186, 186, 186));
+}
+#myev{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: brown; */
+  margin: 0;
+  padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(255, 255, 255);
+
+}
+.signup-body{
+    padding: 0px 20px 10px 20px;
+    
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.nav-title{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.nav-title img{
+    position: absolute;
+    left: 0;
+}
+.section-for-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nav-title h1{
+    font-weight: 700;
+}
+
+
+.input-group img{
+    position: absolute;
+    top: 18px;
+    right: 30px;
+    width: 25px;
+}
+
+
+.input-group {
+    position: relative;
+    border: solid 2px #EEE5FF;
+    border-radius: 16px;
+   }
+   
+   .input {
+    border: solid 1.5px transparent;
+    border-radius: 8px;
+    width: 100%;
+    background: none;
+    padding: 1rem;
+    padding-right: 70px;
+    font-size: 1rem;
+    color: #000000;
+    transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .user-label {
+    position: absolute;
+    left: 15px;
+    color: #9b9b9b;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+   }
+   
+   .input:focus, input:valid {
+    outline: none;
+    border: 1.5px solid transparent;
+   }
+   
+   .input:focus ~ label, input:valid ~ label {
+    transform: translateY(-50%) scale(0.8);
+    background-color: #ffffff;
+    padding: 0 .2em;
+    color: #000000;
+    font-weight: 600;
+   }
+
+
+
+.purp{
+    color: #7F3DFF;
+}
+.terms-checkbox{
+    display: flex;
+}
+
+   .checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    user-select: none;
+  }
+  
+  .custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border-radius: 4px;
+    outline: 1px solid #7F3DFF;
+    border: 1px solid #7F3DFF;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  .custom-checkbox:checked ~ .checkmark {
+    background-color: #7F3DFF;
+    box-shadow: 0 3px 7px rgba(33, 150, 243, 0.3);
+  }
+  
+  .custom-checkbox:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  @keyframes checkAnim {
+    0% {
+      height: 0;
+    }
+  
+    100% {
+      height: 10px;
+    }
+  }
+  
+  .custom-checkbox:checked ~ .checkmark:after {
+    animation: checkAnim 0.2s forwards;
+  }
+  
+
+.swiper-button-signup{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+    height: 60px;
+    margin-top: 0px;
+    color: white;
+    border-radius: 16px;
+    background-color: #7F3DFF;
+    border: none;
+}
+.form-container h4{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 29px;
+}
+.f1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.google-button-signup img{
+    margin-right: 10px;
+}
+.google-button-signup{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    height: 60px;
+    margin-top: 0;
+    margin: 0;
+    color: rgb(0, 0, 0);
+    border-radius: 16px;
+    background-color: #ffffff;
+    border: 1px solid grey;
+    
+}
+
+.form-container h5{
+    text-align: center;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    color: #9b9b9b;
+}
+
+.form-container h5 span{
+    color: #7F3DFF;
+}
+.form-container h1{
+   text-align: start;
+   font-size: 25px;
+   font-weight: 700;
+   color: #000000;
+   line-height: 39px;
+}

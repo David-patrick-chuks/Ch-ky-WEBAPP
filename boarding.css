@@ -5,6 +5,12 @@
     box-sizing: border-box;
 
 }
+.box{
+    display: grid;
+    place-content: center;
+    place-items: center;
+    /* flex-direction: column; */
+}
 .proloader{
     animation: loader 0.8s 2.2s ease-in forwards;
     position: absolute;
@@ -20,38 +26,54 @@
     justify-content: center;   
     background: rgb(138,78,255);
     background: linear-gradient(0deg, rgba(138,78,255,1) 35%, rgba(15,232,215,1) 100%);
-
-}
-
-@keyframes img {
-    0%{
-        opacity: 0;
-        width: 200px;
-    }
-    100%{
-
-        opacity: 1;
-        width: 280px;
-    }
-  
-}
-.mylogo{   
-    position: absolute;
-    top: 320px;
-    animation: logo 2s;
-}
-.mylogo img {
-    width: 280px;
-    visibility: visible;
-    animation: img 2s;
-
     
 }
+
 @keyframes loader {
     to{
         left: -100%;
     }
   
+}
+@keyframes texted {
+    to{
+        opacity: 1;
+    }
+    
+}
+.preloader-text {
+    animation: texted 3s ease-in-out;
+    opacity: 0;
+    animation-delay: 0.8s;
+}
+
+@keyframes img {
+    0%{
+        opacity: 1;
+        width: 200px;
+    }
+    99%{opacity: 1;}
+    100%{
+
+        opacity: 0;
+        /* width: 280px; */
+    }
+  
+}
+.mylogo{   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: logo 1s;
+}
+.mylogo img {
+    width: 280px;
+    visibility: visible;
+    opacity: 0;
+    animation: img 1s;
+
+    
 }
 .preloader-text h2{
     font-size: 40px;
@@ -63,23 +85,28 @@
     font-weight: 700;
     color: white !important;;
 }
+
 section{
-    margin-bottom: 35px;
-    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    /* height: 100vh; */
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    /* background-color: rgb(206, 55, 55); */
 }
 body{
-    background-size: cover;
-    height: 100vh;
     font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;   
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(83, 6, 6); */
 
 }
 .text-wrapper{
     padding: 10px;
+    /* background: red; */
+    height: 100px;
+    overflow: hidden;
 }
 .text-wrapper h1{
     color: black;
@@ -100,18 +127,22 @@ body{
 }
 
 .chuks{
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(232, 7, 7); */
     display: flex;
-    width: 400px;
+    /* width: 100vw; */
     padding: 10px;
-    gap: 20px;
+    gap: 10px;
+    /* margin-top: 10px; */
     flex-direction: column;
 
 }
-
+.box img{
+    width: 300px;
+}
 .chuks .swiper-button-signup{
-    width: 100%;
+    width: 80vw;
     font-size: 20px;
+    /* margin-top: 50px;   check back later   */
     font-weight: 500;
     height: 60px;
     color: white;
@@ -132,7 +163,7 @@ body{
 }
 
 .chuks .swiper-button-login{
-    width: 100%;
+    width: 80vw;
     font-size: 20px;
     font-weight: 500;
     height: 60px;
@@ -141,8 +172,12 @@ body{
     background-color: #EEE5FF;
     border: none;
 }
+#lastimg{
+    width: 75%;
+}
 #adj{
-    margin-top: 32px;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 
@@ -166,7 +201,7 @@ li{
 
 ol.carousel-indicators {
     position: absolute;
-    bottom: -30px;
+    bottom: -10px;
     margin: 0;
     left: 0;
     justify-content: center;
@@ -195,4 +230,54 @@ ol.carousel-indicators li {
 
 ol.carousel-indicators li.active {
     background: #7F3DFF;
+}
+
+@media only screen and (max-width: 480px) {
+    .preloader-text h1{
+        font-size: 12vw;
+    }
+    section{
+        /* background: red; */
+        width: 100vw;
+        /* height: 100%; */
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+    }
+    body{
+        height: 100vh;
+    }
+    
+.chuks{
+    /* background-color: rgb(232, 7, 7); */
+    /* margin-top: 50px; */
+    }
+    .text-wrapper{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        /* background: red; */
+        height: 200px;
+        overflow: hidden;
+    }
+    .text-wrapper h1{
+        color: black;
+        text-align: center;
+        font-weight: 800;
+        font-size: 30px;
+        width: 80vw;
+        font-family: "Poppins", sans-serif;
+    
+    }
+    
+    .text-wrapper P{
+        color: black;
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        width: 80vw;
+        font-family: "Poppins", sans-serif;
+    
+    }
 }
